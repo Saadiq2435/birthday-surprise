@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Birthday Surprise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="flowers">
+    <div class="flower rose"></div>
+    <div class="flower cherry"></div>
+    <div class="flower tulips"></div>
+    <div class="flower daisy"></div>
+</div>
+
+<div class="decorations">
+    <span class="star s1">✦</span>
+    <span class="star s2">✧</span>
+    <span class="star s3">✦</span>
+    <span class="star s4">✧</span>
+    <span class="star s5">✦</span>
+    <span class="star s6">✧</span>
+    <span class="star s7">✦</span>
+    <span class="star s8">✧</span>
+    <span class="star s9">✦</span>
+    <span class="star s10">✧</span>
+
+    <span class="heart h1">♡</span>
+    <span class="heart h2">♥</span>
+    <span class="heart h3">♡</span>
+    <span class="heart h4">♥</span>
+
+    <span class="dot d1"></span>
+    <span class="dot d2"></span>
+    <span class="dot d3"></span>
+    <span class="dot d4"></span>
+    <span class="dot d5"></span>
+    <span class="dot d6"></span>
+
+    <span class="mini m1">✿</span>
+    <span class="mini m2">✿</span>
+    <span class="mini m3">❀</span>
+    <span class="mini m4">✿</span>
+</div>
+
+<div id="celebration" aria-hidden="true">
+    <div class="balloon balloon1"><div class="balloon-body"></div><div class="balloon-string"></div></div>
+    <div class="balloon balloon2"><div class="balloon-body"></div><div class="balloon-string"></div></div>
+    <div class="balloon balloon3"><div class="balloon-body"></div><div class="balloon-string"></div></div>
+    <div class="balloon balloon4"><div class="balloon-body"></div><div class="balloon-string"></div></div>
+    <div class="balloon balloon5"><div class="balloon-body"></div><div class="balloon-string"></div></div>
+    <div class="balloon balloon6"><div class="balloon-body"></div><div class="balloon-string"></div></div>
+    <div class="balloon balloon7"><div class="balloon-body"></div><div class="balloon-string"></div></div>
+    <div class="balloon balloon8"><div class="balloon-body"></div><div class="balloon-string"></div></div>
+    <div class="balloon balloon9"><div class="balloon-body"></div><div class="balloon-string"></div></div>
+    <div class="balloon balloon10"><div class="balloon-body"></div><div class="balloon-string"></div></div>
+    <div class="party-popper popper-left">🎉</div>
+    <div class="party-popper popper-right">🎉</div>
+    <div class="celebration-confetti" id="celebrationConfetti"></div>
+    <div class="floating-sparkles" id="floatingSparkles"></div>
+</div>
+
+<main>
+    <section class="screen welcome active" id="page1">
+        <small>A LITTLE SOMETHING FOR YOU</small>
+        <h1>Wait...</h1>
+        <p class="question">
+    <span>Do you know what day it is today?</span> 👀
+</p>
+
+        <div class="date-guess">
+            <label for="birthdayDate">Pick today's date</label>
+            <input type="date" id="birthdayDate">
+            <button id="checkDate">Are you sure?🐸 <span>→</span></button>
+        </div>
+
+        <p class="date-message" id="dateMessage"></p>
+
+        <div id="afterCorrect" class="hidden">
+            <p class="subtext">It's not just another day.</p>
+            <p class="reason">There's a reason today deserves a little celebration.</p>
+            <button id="findOut">Find out <span>→</span></button>
+        </div>
+    </section>
+
+    <section class="screen reveal" id="page2">
+        <div class="reveal-icon">🌸</div>
+        <small>NOW YOU KNOW</small>
+        <h2>Someone pretty amazing<br>was born today.</h2>
+        <h3>Happy Birthday! <span class="birthday-emoji">🎂</span> Rowja</h3>
+        <p class="reveal-text">And I may have prepared<br>something a little extra for you.</p>
+        <button id="moreButton">There's more <span>→</span></button>
+    </section>
+
+    <section class="screen cake-page" id="page3">
+        <div class="cake-header">
+            <small>LET'S CELEBRATE</small>
+            <h2>Make a wish...</h2>
+        </div>
+
+        <div class="cake-instruction" id="cakeInstruction">
+            Make a wish in your heart
+            <span>then blow the candle</span>
+        </div>
+
+        <button class="cake-action-btn" id="blowButton">
+            Blow the candle <span>💨</span>
+        </button>
+
+        <div class="cake-scene">
+            <div class="cake-plate"></div>
+            <div class="cake">
+                <div class="cake-layer layer-bottom">
+                    <div class="icing"></div>
+                    <span class="sprinkle spk1"></span>
+                    <span class="sprinkle spk2"></span>
+                    <span class="sprinkle spk3"></span>
+                    <span class="sprinkle spk4"></span>
+                    <span class="sprinkle spk5"></span>
+                    <span class="sprinkle spk6"></span>
+                </div>
+
+                <div class="cake-layer layer-middle">
+                    <div class="icing"></div>
+                    <span class="sprinkle spk7"></span>
+                    <span class="sprinkle spk8"></span>
+                    <span class="sprinkle spk9"></span>
+                    <span class="sprinkle spk10"></span>
+                </div>
+
+                <div class="cake-layer layer-top">
+                    <div class="icing"></div>
+                    <span class="sprinkle spk11"></span>
+                    <span class="sprinkle spk12"></span>
+                    <span class="sprinkle spk13"></span>
+                    <span class="sprinkle spk14"></span>
+
+                    <div class="candles">
+                        <div class="candle candle1"><div class="flame"></div></div>
+                        <div class="candle candle2"><div class="flame"></div></div>
+                        <div class="candle candle3"><div class="flame"></div></div>
+                        <div class="candle candle4"><div class="flame"></div></div>
+                    </div>
+                </div>
+
+                <div class="cake-slice" id="cakeSlice">
+                    <div class="slice-icing"></div>
+                    <div class="slice-body"></div>
+                </div>
+            </div>
+        </div>
+
+        <button class="cake-cut-btn disabled" id="cutCakeButton" disabled>
+            Cut the cake <span>→</span>
+        </button>
+    </section>
+
+    <section class="screen message-page" id="page4">
+        <div class="message-content">
+            <div class="message-photos" aria-hidden="true">
+                <img class="message-photo photo-one" src="images/image1.png" alt="">
+                <img class="message-photo photo-two" src="images/image2.png" alt="">
+                <img class="message-photo photo-three" src="images/image3.png" alt="">
+                <img class="message-photo photo-four" src="images/image4.png" alt="">
+            </div>
+            <small>A LITTLE MESSAGE FOR YOU ✨</small>
+            <h2> Happy Birthday! 🎂Again</h2>
+            <div class="birthday-message">
+                <p>I just wanted to remind you how special you are.</p>
+                <p>May this new year of your life bring you lots of happiness,<br>
+                    good surprises, meaningful moments,<br>
+                    and plenty of reasons to smile.❤️‍🩹</p>
+                <p>May you have more laughter than worries,<br>
+                    more good days than bad ones,<br>
+                    and lots of little moments that make you think,<br>
+                    “Yep, life is pretty good.” ✨</p>
+                <p>I hope you get everything you've been wishing for,<br>
+                    and maybe a little more than you expected.</p>
+            </div>
+            <p class="message-closing">You deserve a really beautiful year. 💝</p>
+        </div>
+        <p>তাড়াতাড়ি বিয়ে করো আর বিয়ের দাওয়াত দাও।</p>
+        <p>এই দোয়া রইলো। 🤲❤️</p>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
