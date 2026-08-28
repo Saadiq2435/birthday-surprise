@@ -3,6 +3,7 @@ const checkDate = document.getElementById("checkDate");
 const dateMessage = document.getElementById("dateMessage");
 const afterCorrect = document.getElementById("afterCorrect");
 const findOut = document.getElementById("findOut");
+const dateInputWrap = document.querySelector(".date-input-wrap");
 
 const page1 = document.getElementById("page1");
 const page2 = document.getElementById("page2");
@@ -38,6 +39,12 @@ let movingToPage2 = false;
 let movingToPage3 = false;
 
 let celebrationStarted = false;
+
+if (birthdayDate && dateInputWrap) {
+    birthdayDate.addEventListener("change", function () {
+        dateInputWrap.classList.toggle("has-value", Boolean(birthdayDate.value));
+    });
+}
 
 
 /* =========================================

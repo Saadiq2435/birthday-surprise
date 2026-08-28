@@ -423,7 +423,7 @@ h1 {
 }
 
 .reason {
-    color: #49353d;
+    color: #c83f78;
     font-size: 15px;
     font-weight: 500;
 }
@@ -448,8 +448,27 @@ h1 {
     margin-bottom: 10px;
 }
 
-.date-guess input[type="date"] {
+.date-input-wrap {
+    position: relative;
     width: 220px;
+    height: 48px;
+}
+
+.date-placeholder {
+    position: absolute;
+    inset: 0 42px 0 16px;
+    display: grid;
+    place-items: center;
+    color: #6f4d58;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    pointer-events: none;
+}
+
+.date-guess input[type="date"] {
+    position: relative;
+    width: 100%;
     height: 48px;
 
     padding: 0 16px;
@@ -463,6 +482,8 @@ h1 {
         rgba(255, 255, 255, .72);
 
     color: #6f4d58;
+
+    color-scheme: light;
 
     font-family:
         "DM Sans",
@@ -483,12 +504,47 @@ h1 {
         box-shadow .25s ease;
 }
 
+.date-input-wrap.has-value .date-placeholder {
+    display: none;
+}
+
+.date-input-wrap:not(.has-value) input[type="date"]::-webkit-datetime-edit,
+.date-input-wrap:not(.has-value) input[type="date"]::-webkit-datetime-edit-text,
+.date-input-wrap:not(.has-value) input[type="date"]::-webkit-datetime-edit-month-field,
+.date-input-wrap:not(.has-value) input[type="date"]::-webkit-datetime-edit-day-field,
+.date-input-wrap:not(.has-value) input[type="date"]::-webkit-datetime-edit-year-field {
+    color: transparent !important;
+}
+
+.date-input-wrap:not(.has-value) input[type="date"]::-webkit-datetime-edit,
+.date-input-wrap:not(.has-value) input[type="date"]::-webkit-datetime-edit-text,
+.date-input-wrap:not(.has-value) input[type="date"]::-webkit-datetime-edit-month-field,
+.date-input-wrap:not(.has-value) input[type="date"]::-webkit-datetime-edit-day-field {
+    color: transparent !important;
+}
+
+.date-input-wrap.has-value input[type="date"]::-webkit-datetime-edit,
+.date-input-wrap.has-value input[type="date"]::-webkit-datetime-edit-text,
+.date-input-wrap.has-value input[type="date"]::-webkit-datetime-edit-month-field,
+.date-input-wrap.has-value input[type="date"]::-webkit-datetime-edit-day-field,
+.date-input-wrap.has-value input[type="date"]::-webkit-datetime-edit-year-field {
+    color: #6f4d58 !important;
+}
+
 .date-guess input[type="date"]:focus {
     border-color: #d96f8a;
 
     box-shadow:
         0 8px 25px
         rgba(220, 100, 140, .16);
+}
+
+.date-guess input[type="date"]::-webkit-datetime-edit,
+.date-guess input[type="date"]::-webkit-datetime-edit-text,
+.date-guess input[type="date"]::-webkit-datetime-edit-month-field,
+.date-guess input[type="date"]::-webkit-datetime-edit-day-field,
+.date-guess input[type="date"]::-webkit-datetime-edit-year-field {
+    color: #6f4d58;
 }
 
 .date-guess input[type="date"]::-webkit-calendar-picker-indicator {
